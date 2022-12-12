@@ -1,40 +1,50 @@
 package com;
 
 public class NullPointerExceptionExample {
-        private String symbol;
-        private int price;
-        public static String market;
+        private String name;
 
-        public NullPointerExceptionExample(String symbol, int price) {
-            this.symbol = symbol;
-            this.price = price;
-        }
+        private int age;
 
-        public int getPrice() {
-            return price;
-        }
+        public static String city;
 
-        public void setPrice(int price) {
-            this.price = price;
-        }
+    public NullPointerExceptionExample(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-        public String getSymbol() {
-            return symbol;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public void setSymbol(String symbol) {
-            this.symbol = symbol;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public static String getCity() {
+        return city;
+    }
+
+    public static void setCity(String city) {
+        NullPointerExceptionExample.city = city;
+    }
 
     public static void main(String[] args) {
-      /*1.Java  NullPointerException while calling instance method on null object
+       /*1.Java  NullPointerException while calling instance method on null object
         NullPointerExceptionExample a = null;
-        a.getPrice(); */
+        a.getAge();*/
 
         /*2.NullPointerException in Java while accessing field on a null reference.
         NullPointerExceptionExample b = null;
-        int price = b.price; //here b is null, you can’t access field here
-        */
+        int age = b.age; //here b is null, you can’t access field here*/
+
 
         /*3.java.lang.NullPointerException when throwing null as an exception.
         If you throw an Exception object and if that is null you will get a null pointer exception as
@@ -59,7 +69,6 @@ public class NullPointerExceptionExample {
         }*/
 
     }
-
-    }
+}
 
 
